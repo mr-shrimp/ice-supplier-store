@@ -1,0 +1,11 @@
+{
+    "name": "Glass Ice",
+    "short_name": "GlassIce",
+    "version": "1.0.0",
+    "description": "A sleek and modern theme with glass-like aesthetics.",
+    "author": "MrShrimp",
+    "theme": {
+        "primaryColor": "#42c2f5",
+        "textColor": "#000"
+    }
+}
