@@ -9,7 +9,7 @@ const Footer = () => {
       marginBlockStart: "100px",
       backgroundColor: theme.palette.primary.main,
       paddingBlockStart: 5,
-      paddingInline: { xs: "15px", sm: "30px", lg: "20%" },
+      paddingInline: { xs: "15px", sm: "10%", md: "5%", lg: "20%" },
       color: "white",
     }}>
       Footer

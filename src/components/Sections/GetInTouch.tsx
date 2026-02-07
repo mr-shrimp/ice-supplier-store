@@ -14,7 +14,6 @@ const GetInTouch = () => {
         width="100%"
       >
         <ContactUsPaper />
-
         <Divider
           orientation="vertical"
           flexItem
