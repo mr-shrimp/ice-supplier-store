@@ -1,22 +1,26 @@
-import { Box } from '@mui/material'
-import logo from "/logo.jpg"
+import { Box, Stack, Typography, useTheme } from '@mui/material'
+import Logo from './Logo'
 
 const Header = () => {
+    const theme = useTheme()
+
     return (
         <Box
             component="header"
             display="flex"
-            justifyContent="center"
+            justifyContent={{ xs: "center", sm: "flex-start" }}
             alignItems="center"
             sx={{
-                paddingBlock: { sm: "5px", lg: "10px" },
-                backgroundColor: "rgba(0, 0, 0, 0.15)",
+                paddingBlock: { xs: 0, lg: "10px" },
+                paddingInline: { xs: 2, lg: 8 },
+                backgroundColor: theme.palette.primary.main,
                 position: "sticky",
                 top: 0,
-                zIndex: 1000
+                zIndex: 1000,
+                color: "#fff",
             }}
         >
-            <img src={logo} alt="Logo" style={{ height: 100, width: 150 }} />
+           <Logo />
         </Box>
     )
 }

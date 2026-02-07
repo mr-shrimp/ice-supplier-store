@@ -4,8 +4,17 @@ const headersFont = "Montserrat, sans-serif";
 const bodyFont = "Hind Siliguri, sans-serif";
 
 const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#292929',
+        },
+    },
+    shape: {
+        borderRadius: 0,
+    },
     typography: {
         fontFamily: [
+            'Hind Siliguri',
             'Arial',
             'sans-serif'
         ].join(','),
