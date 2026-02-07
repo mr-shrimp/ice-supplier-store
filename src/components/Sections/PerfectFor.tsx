@@ -1,27 +1,31 @@
-import CustomCard from "../CustomCard"
+import CustomPaper from "../CustomPaper"
 import ResponsiveCarousel from "../ResponsiveCarousel"
 import Section from "../Section"
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import CelebrationIcon from '@mui/icons-material/Celebration';
+import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
+import OutdoorGrillIcon from '@mui/icons-material/OutdoorGrill';
 
 const items = [
     {
         title: "Restaurants & Bars",
         description : "Keep your drinks cold and your customers happy with our high-quality ice.",
-        image: "/test-image.png",
+        icon: <RestaurantIcon fontSize="large" />
     },
     {
         title: "Weddings & Events",
         description : "Perfect for keeping your guests cool and your event running smoothly.",
-        image: "/test-image.png",
+        icon: <CelebrationIcon fontSize="large" />,
     },
     {
         title: "Construction",
         description : "Ideal for keeping materials and equipment cool in demanding environments.",
-        image: "/test-image.png",
+        icon: <PrecisionManufacturingIcon fontSize="large" />,
     },
     {
         title: "Braais",
         description : "Perfect for keeping your braai guests cool and comfortable.",
-        image: "/test-image.png",
+        icon: <OutdoorGrillIcon fontSize="large" />,
     },
 ]
 
@@ -31,7 +35,7 @@ const PerfectFor = () => {
             <ResponsiveCarousel
                 items={items}
                 renderItem={(item) => (
-                    <CustomCard {...item} />
+                    <CustomPaper {...item} />
                 )}
             />
         </Section>

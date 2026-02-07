@@ -2,6 +2,8 @@ import { Box } from '@mui/material'
 import Hero from './Sections/HeroSlides'
 import OurProducts from './Sections/OurProducts'
 import PerfectFor from './Sections/PerfectFor'
+import HowItWorks from './Sections/HowItWorks'
+import GetInTouch from './Sections/GetInTouch'
 
 const Main = () => {
   return (
@@ -11,6 +13,8 @@ const Main = () => {
       </Box>
       <OurProducts />
       <PerfectFor />
+      <HowItWorks />
+      <GetInTouch />
     </Box>
   )
 }

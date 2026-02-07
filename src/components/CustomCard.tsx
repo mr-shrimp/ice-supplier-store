@@ -9,6 +9,7 @@ interface CustomCardProps {
 const CustomCard = (props: CustomCardProps) => {
   return (
     <Card
+      variant='outlined'
       sx={{
         width: { xs: '100%', sm: 200, md: 300, lg: 300, xl: 300 },
         height: { xs: 300, sm: 320, md: 300, lg: 300, xl: 300 },

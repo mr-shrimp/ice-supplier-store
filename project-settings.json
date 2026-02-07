@@ -4,8 +4,14 @@
     "version": "1.0.0",
     "description": "A sleek and modern theme with glass-like aesthetics.",
     "author": "MrShrimp",
+    "contact": {
+        "email": "info@glassice.co.za",
+        "phone": "+27 82 444 1234",
+        "whatsapp": "+27 82 444 1234"
+    },
     "theme": {
-        "primaryColor": "#42c2f5",
+        "primaryColor": "#292929",
+        "secondaryColor": "#0aad6f",
         "textColor": "#000"
     }
 }

@@ -39,9 +39,6 @@ const ResponsiveCarousel = <T,>({
     <Box
       sx={{
         position: "relative",
-        backdropFilter: "blur(12px)",
-        background: "rgba(255,255,255,0.15)",
-        borderRadius: 3,
       }}
     >
       <AutoPlaySwipeableViews
