@@ -19,7 +19,7 @@ const HowItWorks = () => {
   const theme = useTheme()
 
   return (
-    <Section title="How It Works" id="how-it-works">
+    <Section title="How It Works" id="section-how-it-works">
       <Box sx={{ mt: 6 }}>
         <Timeline position="alternate">
           {steps.map((label, index) => (

@@ -4,6 +4,7 @@ import OurProducts from './Sections/OurProducts'
 import PerfectFor from './Sections/PerfectFor'
 import HowItWorks from './Sections/HowItWorks'
 import GetInTouch from './Sections/GetInTouch'
+import DeliveryAreas from './Sections/DeliveryAreas'
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
       <OurProducts />
       <PerfectFor />
       <HowItWorks />
+      <DeliveryAreas />
       <GetInTouch />
     </Box>
   )

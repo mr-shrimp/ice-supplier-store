@@ -1,0 +1,76 @@
+{
+  "deliveryAreas": [
+    {
+      "city": "Vanderbijlpark",
+      "municipality": "Emfuleni Local Municipality",
+      "suburbs": [
+        "Vanderbijlpark Central",
+        "SW1",
+        "SW2",
+        "SW3",
+        "SW4",
+        "SW5",
+        "SE1",
+        "SE2",
+        "SE3",
+        "SE4",
+        "SE5",
+        "SE6",
+        "SE7",
+        "CW1",
+        "CW2",
+        "CW3",
+        "CW4",
+        "CW5",
+        "CW6",
+        "CE1",
+        "CE2",
+        "CE3",
+        "CE4",
+        "CE5",
+        "CE6",
+        "CE7",
+        "Bophelong",
+        "Boipatong"
+      ]
+    },
+    {
+      "city": "Vereeniging",
+      "suburbs": [
+        "Three Rivers",
+        "Three Rivers East",
+        "Arcon Park",
+        "Risiville",
+        "Duncanville",
+        "Roshnee"
+      ]
+    },
+    {
+      "city": "Sasolburg",
+      "suburbs": [
+        "Sasolburg Central",
+        "Vaalpark",
+        "Zamdela"
+      ]
+    },
+    {
+      "city": "Meyerton",
+      "suburbs": [
+        "Meyerton Central",
+        "Henley-on-Klip",
+        "Kookrus",
+        "Golf Park"
+      ]
+    },
+    {
+      "city": "Surrounding Areas",
+      "note": "Delivery available on request",
+      "suburbs": [
+        "Sebokeng",
+        "Sharpeville",
+        "Evaton"
+      ]
+    }
+  ],
+  "disclaimer": "Not sure if we deliver to your area? Contact us and we’ll confirm availability quickly."
+}

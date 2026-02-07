@@ -31,7 +31,7 @@ const items = [
 
 const PerfectFor = () => {
     return (
-        <Section title="Perfect For" id="perfect-for">
+        <Section title="Perfect For" id="section-perfect-for">
             <ResponsiveCarousel
                 items={items}
                 renderItem={(item) => (

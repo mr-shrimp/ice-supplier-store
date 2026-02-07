@@ -15,6 +15,7 @@ const Section = (props: SectionProps) => {
         py: 4,
         px: { xs: 2, sm: '10%', md: '5%', lg: '20%' },
         textAlign: 'center',
+        scrollMarginTop: 96,
       }}
     >
       <Typography variant="h2">

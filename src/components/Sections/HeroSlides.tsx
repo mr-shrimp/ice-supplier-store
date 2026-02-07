@@ -36,7 +36,7 @@ const heroSlides = [
 
 const Hero = () => {
     return (
-        <Box component="section" sx={{ width: '100%' }}>
+        <Box component="section" id="section-hero" sx={{ width: '100%' }}>
             <BaseCarousel>
                 {heroSlides.map((slide, index) => (
                     <Box

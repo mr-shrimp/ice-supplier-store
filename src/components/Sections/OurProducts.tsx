@@ -22,7 +22,7 @@ const products = [
 
 const OurProducts = () => {
   return (
-    <Section title="Our Products" id="our-products">
+    <Section title="Our Products" id="section-our-products">
       <ResponsiveCarousel
         items={products}
         renderItem={(product) => (
