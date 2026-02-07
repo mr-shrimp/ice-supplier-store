@@ -67,7 +67,6 @@ const DeliveryAreas = () => {
           <Typography
             variant="body2"
             fontStyle="italic"
-            color="warning"
           >
             {deliveryData.disclaimer}
           </Typography>

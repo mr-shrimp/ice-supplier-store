@@ -6,8 +6,17 @@
     "author": "MrShrimp",
     "contact": {
         "email": "info@glassice.co.za",
-        "phone": "+27 82 444 1234",
-        "whatsapp": "+27 82 444 1234"
+        "phone": {
+            "display": "+27 76 322 0935",
+            "dial": "27763220935"
+        },
+        "whatsapp": {
+            "number": {
+                "display": "+27 76 322 0935",
+                "dial": "27763220935"
+            },
+            "defaultMessage": "Hi Zakie, I'd like to get a quote."
+        }
     },
     "theme": {
         "primaryColor": "#292929",

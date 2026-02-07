@@ -6,13 +6,11 @@ const heroSlides = [
         title: 'Crystal Clear Ice',
         subtitle: 'Perfect for events, parties & businesses',
         image: '/hero-slides/hero-slide-1.png',
-        cta: 'Call Now',
     },
     {
         title: 'Bulk & Bagged Ice',
         subtitle: 'From small orders to large scale supply',
         image: '/hero-slides/hero-slide-2.png',
-        cta: 'Get a Quote',
     },
     {
         title: 'Delivered Cold. Always Reliable.',
