@@ -1,5 +1,5 @@
-import Section from '../Section'
-import deliveryData from '../../../public/delivery-areas.json'
+import { useEffect, useState } from "react"
+import Section from "../Section"
 import {
   Accordion,
   AccordionSummary,
@@ -8,23 +8,44 @@ import {
   Chip,
   Stack,
   Typography,
-} from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+} from "@mui/material"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+import { fetchDeliveryAreas } from "../../utils/fetchDeliveryAreas"
+import { fetchSiteSettings } from "../../utils/fetchSiteSettings"
+import type { DeliveryArea } from "../../types/DeliveryArea"
+import type { SiteSettings } from "../../types/SiteSettings"
 
 const DeliveryAreas = () => {
+  const [areas, setAreas] = useState<DeliveryArea[]>([])
+  const [settings, setSettings] = useState<SiteSettings | null>(null)
+
+  useEffect(() => {
+    Promise.all([
+      fetchDeliveryAreas(),
+      fetchSiteSettings(),
+    ])
+      .then(([areasData, settingsData]) => {
+        setAreas(areasData)
+        setSettings(settingsData)
+      })
+      .catch(console.error)
+  }, [])
+
+  if (!areas.length) return null
+
   return (
     <Section title="Delivery Areas" id="section-delivery-areas">
       <Stack spacing={2} mt={3}>
-        {deliveryData.deliveryAreas.map((area, index) => (
+        {areas.map((area) => (
           <Accordion
-            key={index}
+            key={area.city}
             elevation={0}
-            defaultExpanded={area.city === 'Vanderbijlpark'}
+            defaultExpanded={area.city === "Vanderbijlpark"}
             sx={{
-              border: '1px solid',
-              borderColor: 'divider',
+              border: "1px solid",
+              borderColor: "divider",
               borderRadius: 2,
-              '&:before': { display: 'none' },
+              "&:before": { display: "none" },
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -34,11 +55,7 @@ const DeliveryAreas = () => {
             </AccordionSummary>
 
             <AccordionDetails>
-              <Stack
-                direction="row"
-                flexWrap="wrap"
-                gap={1}
-              >
+              <Stack direction="row" flexWrap="wrap" gap={1}>
                 {area.suburbs.map((suburb) => (
                   <Chip
                     key={suburb}
@@ -63,14 +80,16 @@ const DeliveryAreas = () => {
           </Accordion>
         ))}
 
-        <Box mt={2}>
-          <Typography
-            variant="body2"
-            fontStyle="italic"
-          >
-            {deliveryData.disclaimer}
-          </Typography>
-        </Box>
+        {settings?.deliveryDisclaimer && (
+          <Box mt={2}>
+            <Typography
+              variant="body2"
+              fontStyle="italic"
+            >
+              {settings.deliveryDisclaimer}
+            </Typography>
+          </Box>
+        )}
       </Stack>
     </Section>
   )

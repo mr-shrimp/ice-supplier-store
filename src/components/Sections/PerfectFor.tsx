@@ -1,45 +1,46 @@
+import { useEffect, useState } from "react"
+import { Typography } from "@mui/material"
+import Section from "../Section"
 import CustomPaper from "../CustomPaper"
 import ResponsiveCarousel from "../ResponsiveCarousel"
-import Section from "../Section"
-import RestaurantIcon from '@mui/icons-material/Restaurant';
-import CelebrationIcon from '@mui/icons-material/Celebration';
-import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
-import OutdoorGrillIcon from '@mui/icons-material/OutdoorGrill';
-
-const items = [
-    {
-        title: "Restaurants & Bars",
-        description : "Keep your drinks cold and your customers happy with our high-quality ice.",
-        icon: <RestaurantIcon fontSize="large" />
-    },
-    {
-        title: "Weddings & Events",
-        description : "Perfect for keeping your guests cool and your event running smoothly.",
-        icon: <CelebrationIcon fontSize="large" />,
-    },
-    {
-        title: "Construction",
-        description : "Ideal for keeping materials and equipment cool in demanding environments.",
-        icon: <PrecisionManufacturingIcon fontSize="large" />,
-    },
-    {
-        title: "Braais",
-        description : "Perfect for keeping your braai guests cool and comfortable.",
-        icon: <OutdoorGrillIcon fontSize="large" />,
-    },
-]
+import { fetchUseCases } from "../../utils/fetchUseCases"
+import type { UseCase } from "../../types/UseCase"
 
 const PerfectFor = () => {
-    return (
-        <Section title="Perfect For" id="section-perfect-for">
-            <ResponsiveCarousel
-                items={items}
-                renderItem={(item) => (
-                    <CustomPaper {...item} />
-                )}
-            />
-        </Section>
-    )
+  const [items, setItems] = useState<UseCase[]>([])
+
+  useEffect(() => {
+    fetchUseCases()
+      .then(setItems)
+      .catch(console.error)
+  }, [])
+
+  if (!items.length) return null
+
+  return (
+    <Section title="Perfect For" id="section-perfect-for">
+      <ResponsiveCarousel
+        items={items}
+        renderItem={(item) => (
+          <CustomPaper
+            title={item.title}
+            description={item.description}
+            icon={
+              <Typography
+                component="span"
+                sx={{
+                  fontSize: 36,
+                  lineHeight: 1,
+                }}
+              >
+                {item.icon}
+              </Typography>
+            }
+          />
+        )}
+      />
+    </Section>
+  )
 }
 
 export default PerfectFor
